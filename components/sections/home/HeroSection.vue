@@ -17,86 +17,103 @@
             <div
                 class="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
                 <div class="lg:py-6">
-                    <div class="text-center lg:text-left">
-                        <span class="px-2 py-1 rounded-md bg-gray-100 dark:bg-body text-primary ">New season
-                            available</span>
-                        <h1 class="text-gray-800 pt-4 dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl">
-                            Find and listen <br> Favorite <span
-                                class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]">Podcast</span>
-                            on internet
+                    <div class="text-center lg:text-left space-y-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            {{ t('heroBadge') }}
+                        </span>
+                        <h1 class="text-gray-900 pt-3 dark:text-white font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight">
+                            {{ t('heroTitle1') }} <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-[#8cd66a]">
+                                {{ t('heroTitle2') }}
+                            </span>
                         </h1>
                     </div>
 
-                    <p class="text-gray-600 dark:text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, beatae omnis ipsa magnam neque
-                        ut nam nesciunt esse fugit praesentium hic magni possimus illo consequatur.
+                    <p class="text-gray-600 dark:text-gray-300 pt-6 text-center lg:text-left mx-auto max-w-xl text-base leading-relaxed">
+                        {{ t('heroSubtitle') }}
                     </p>
 
-                    <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
-                        <AtomsLinkBtn href="#" variant="primary" class="w-full sm:w-max flex justify-center">
-                            Join us
+                    <div class="flex items-center gap-4 pt-8 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
+                        <AtomsLinkBtn href="/video/1" variant="primary" class="w-full sm:w-max flex justify-center shadow-lg shadow-primary/30">
+                            <span class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                {{ t('heroPlayBtn') }}
+                            </span>
                         </AtomsLinkBtn>
 
-                        <AtomsLinkBtn href="#" variant="costum" costum-span-class="px-6 md:px-7 hover:bg-primary/10"
-                            costum-text-color="text-primary ">
-                            <div class="flex items-center gap-3">
-                                <span class="p-2 rounded-full border border-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                        fill="currentColor" class="w-3 h-3">
-                                        <path fill-rule="evenodd"
-                                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </span>
-
-                                <span>
-                                    Listening Episode
-                                </span>
-                            </div>
-                        </AtomsLinkBtn>
+                        <a href="#popular" class="w-full sm:w-auto">
+                            <AtomsLinkBtn href="#popular" variant="costum" costum-span-class="px-6 md:px-7 hover:bg-primary/10"
+                                costum-text-color="text-primary">
+                                <div class="flex items-center gap-2 font-medium">
+                                    <span>{{ t('heroExploreBtn') }}</span>
+                                </div>
+                            </AtomsLinkBtn>
+                        </a>
                     </div>
+
                     <div class="pt-8 lg:pt-10 w-max mx-auto lg:mx-0">
                         <div class="flex items-center text-center flex-col sm:flex-row gap-4 sm:gap-0">
                             <div class="flex items-center">
-                                <img src="/images/sidebiew.webp" width="40" alt="avatar"
-                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover">
-                                <img src="/images/sidebiew.webp" width="40" alt="avatar"
-                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5">
-                                <img src="/images/sidebiew.webp" width="40" alt="avatar"
-                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5">
-                                <img src="/images/sidebiew.webp" width="40" alt="avatar"
-                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 object-cover -ml-2.5">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" width="40" alt="avatar"
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-800 object-cover">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" width="40" alt="avatar"
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-800 object-cover -ml-2.5">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" width="40" alt="avatar"
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-800 object-cover -ml-2.5">
                                 <span
-                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-400 bg-body-color flex items-center justify-center text-xs text-gray-300 object-cover -ml-2.5">
-                                    300+
+                                    class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-800 bg-primary/20 flex items-center justify-center text-xs text-primary font-bold -ml-2.5">
+                                    50k+
                                 </span>
                             </div>
-                            <div class="pl-2 text-gray-600 dark:text-gray-200">
-                                WordWide listners
+                            <div class="pl-3 text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300">
+                                {{ t('heroAudience') }}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="lg:h-full  hidden md:flex">
 
-                    <div
-                        class="flex w-full h-96 min-h-[24rem] lg:min-h-[none] lg:w-full lg:h-full items-center relative">
-                        <div
-                            class="absolute z-0 top-1/2  -translate-y-1/2 w-5/6 right-0 h-[calc(80%+20px)] bg-gradient-to-tr opacity-25 from-primary to-pink-300 dark:from-[#570cac] dark:to-primary blur-2xl">
+                <!-- Right Spotlight video card -->
+                <div class="lg:h-full hidden md:flex items-center justify-center">
+                    <NuxtLink to="/video/1" class="group relative w-full aspect-video rounded-3xl overflow-hidden bg-gray-900 shadow-2xl border-4 border-box-border/80 hover:border-primary/50 transition-all duration-500">
+                        <img
+                            src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1000&q=80"
+                            alt="Featured Video"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="relative w-20 h-20 rounded-full bg-primary/90 text-white flex items-center justify-center shadow-2xl shadow-primary/50 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 ml-1 fill-current" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div
-                            class="absolute w-3/5 h-full z-10 p-1 -translate-y-1/2 top-1/2 right-3 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border">
-                            <img src="/images/sidebiew.webp" alt="In studio" width="500" height="auto" loading="lazy"
-                                class="w-full h-full rounded-2xl object-cover">
+
+                        <div class="absolute bottom-6 inset-x-6 flex items-end justify-between">
+                            <div>
+                                <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-primary text-white">{{ t('heroSpotlightTag') }}</span>
+                                <h3 class="text-white text-lg font-bold mt-2 line-clamp-1">
+                                    {{ spotlightTitle }}
+                                </h3>
+                            </div>
+                            <span class="text-xs text-white/90 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full font-mono">
+                                24:15
+                            </span>
                         </div>
-                        <div
-                            class="absolute  -translate-y-1/2 top-1/2 h-[calc(80%-2rem)] w-[calc(40%-20px)] p-1 rounded-3xl bg-white dark:bg-body shadow-lg shadow-box-shadow border border-box-border ">
-                            <img src="/images/sidebiew.webp" alt="Happy in studio" width="200" height="auto"
-                                loading="lazy" class="w-full h-full rounded-2xl object-cover">
-                        </div>
-                    </div>
+                    </NuxtLink>
                 </div>
             </div>
         </AtomsContainer>
     </section>
 </template>
+
+<script setup lang="ts">
+const { t, currentLang } = useLanguage()
+const { getVideoById } = useVideos()
+
+const spotlightTitle = computed(() => getVideoById('1').title)
+</script>

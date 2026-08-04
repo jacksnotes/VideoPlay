@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-16 relative">
+    <section id="popular" class="pt-16 pb-12 relative">
         <div aria-hidden="true" class="absolute inset-y-0 w-44 left-0 hidden dark:flex">
             <div
                 class="h-full md:h-1/2 lg:h-full w-full bg-gradient-to-tr opacity-40 dark:blur-2xl dark:from-[#570cac] dark:opacity-20">
@@ -14,92 +14,68 @@
             </div>
         </div>
         <AtomsContainer class-name="relative">
-            <div class="flex justify-between pb-6 relative">
-                <div class="">
-                    <AtomsTitle texte="Popular podcast" />
+            <!-- Header & Filter -->
+            <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 gap-4 relative">
+                <div>
+                    <AtomsTitle :texte="t('popularTitle')" />
+                    <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
+                        {{ t('popularSubtitle') }}
+                    </p>
                 </div>
-                <div class="flex items-center min-w-max gap-5">
-                    <AtomsLinkBtn href="#" variant="primary">
-                        See all
-                    </AtomsLinkBtn>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <button
+                        v-for="cat in categoryList"
+                        :key="cat.key"
+                        @click="activeCategoryKey = cat.key"
+                        :class="[
+                            'px-4 py-2 text-xs font-semibold rounded-full transition-all duration-300',
+                            activeCategoryKey === cat.key
+                                ? 'bg-primary text-white shadow-md shadow-primary/30 scale-105'
+                                : 'bg-box-bg border border-box-border text-gray-600 dark:text-gray-300 hover:border-primary/40'
+                        ]"
+                    >
+                        {{ cat.label }}
+                    </button>
                 </div>
             </div>
-            <div
-                class="grid grid-cols-2 items-stretch sm:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-10 sm:gap-x-5 sm:gap-y-8">
 
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet,  voluptates porro" 
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <CardsPodCast
+                    v-for="item in filteredVideos"
+                    :key="item.id"
+                    :title="item.title"
+                    :href="'/video/' + item.id"
+                    :duration="item.duration"
+                    :cover-image="item.coverImage"
+                    :category="item.category"
+                    :created-at="item.createdAt"
+                    :description="item.description"
                 />
-
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro" 
-                />
-
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro" 
-                />
-
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro" 
-                />
-
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet,  voluptates porro" 
-                />
-
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro" 
-                />
-
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro" 
-                />
-
-                <CardsPodCast title="Start your journey in SEO" 
-                    href="#" 
-                    duration="24min"
-                    cover-image="/images/podCast.webp" 
-                    category="" 
-                    created-at=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptates porro" 
-                />
-                
             </div>
         </AtomsContainer>
     </section>
 </template>
+
+<script setup lang="ts">
+const { t } = useLanguage()
+const { rawVideos, videos } = useVideos()
+
+const activeCategoryKey = ref('ALL')
+
+const categoryList = computed(() => [
+    { key: 'ALL', label: t('catAll') },
+    { key: 'Movies', label: t('catMovie') },
+    { key: 'Tech', label: t('catTech') },
+    { key: 'Anime', label: t('catAnime') },
+    { key: 'Music', label: t('catMusic') },
+    { key: 'Documentary', label: t('catDoc') }
+])
+
+const filteredVideos = computed(() => {
+    if (activeCategoryKey.value === 'ALL') return videos.value
+    return videos.value.filter((v, idx) => rawVideos[idx].category.en === activeCategoryKey.value)
+})
+</script>
