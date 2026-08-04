@@ -53,7 +53,7 @@ export const useVideos = () => {
         en: 'An in-depth look into the convergence of deep neural networks and robotics, exploring the next decade of intelligent transformation.',
         zh: '深入剖析最新神经网络与机器人技术的深度融合，带你展望未来十年的科技变革与智能化生活体验。'
       },
-      embedUrl: 'https://show.vidplayer.live/#or1s5',
+      embedUrl: 'https://view.4meplayer.com/#9bxxz',
       coverImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
       duration: '05:14',
       category: { en: 'Tech', zh: '科技' },
