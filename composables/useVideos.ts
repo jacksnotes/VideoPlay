@@ -145,7 +145,7 @@ export const useVideos = () => {
         en: 'Exclusive preview breakdown of the upcoming sci-fi masterpiece, revealing high-dimensional visual effects behind the scenes.',
         zh: '年度期待科幻巨作全新预告，揭秘高维空间与黑洞穿梭的视觉特效制作内幕。'
       },
-      embedUrl: 'https://bigshare.io/watch/107955',
+      embedUrl: 'https://goodstream.one/embed-7uq0dvgv0k1b.html',
       coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
       duration: '01:06',
       category: { en: 'Movies', zh: '电影' },
