@@ -122,7 +122,7 @@ export const useVideos = () => {
         en: 'Follow wildlife film crews deep into the Amazon basin to capture rare species and breathtaking untouched wilderness.',
         zh: '跟随探险摄像团队深入亚马逊热带雨林，记录珍稀野生动物的真实生存状态与壮丽自然景色。'
       },
-      embedUrl: 'https://bigshare.io/watch/107957',
+      embedUrl: 'https://bigshare.io/watch/107955',
       coverImage: 'https://bigshare.io/thumbnails/1minuteofNeymarbeingNeymar｜neymarneymarjraregamfootbal....mp4.jpg',
       duration: '01:00',
       category: { en: 'Documentary', zh: '纪录片' },
@@ -145,7 +145,7 @@ export const useVideos = () => {
         en: 'Exclusive preview breakdown of the upcoming sci-fi masterpiece, revealing high-dimensional visual effects behind the scenes.',
         zh: '年度期待科幻巨作全新预告，揭秘高维空间与黑洞穿梭的视觉特效制作内幕。'
       },
-      embedUrl: 'https://vids.st/v/113453',
+      embedUrl: 'https://bigshare.io/watch/107955',
       coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
       duration: '01:06',
       category: { en: 'Movies', zh: '电影' },
