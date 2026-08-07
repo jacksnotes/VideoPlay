@@ -203,6 +203,52 @@ export const useVideos = () => {
         avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80',
         subscribers: { en: '410K', zh: '41.0万' }
       }
+    },
+    {
+      id: '9',
+      title: {
+        en: 'Cyberpunk Neon City Live Music & Visuals: Lofi Chill Waves',
+        zh: '赛博朋克都市夜景 Live Music & Visuals 视觉盛宴'
+      },
+      description: {
+        en: 'Immersive neon cyberpunk atmospheres mixed with relaxing Lofi Synthwave melodies, perfect for study, work and late night relaxation.',
+        zh: '沉浸式霓虹赛博朋克光影，搭配放松解压的 Lofi Synthwave 音乐，适合学习、工作与放松时播放。'
+      },
+      embedUrl: 'https://show.vidplayer.live/#lvzwo',
+      coverImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+      duration: '01:07',
+      category: { en: 'Music', zh: '音乐' },
+      views: '84.5k',
+      likes: '6.9k',
+      createdAt: '2026-07-30',
+      author: {
+        name: 'CyberWave FM',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
+        subscribers: { en: '194K', zh: '19.4万' }
+      }
+    },
+    {
+      id: '10',
+      title: {
+        en: 'Cyberpunk Neon City Live Music & Visuals: Lofi Chill Waves',
+        zh: '赛博朋克都市夜景 Live Music & Visuals 视觉盛宴'
+      },
+      description: {
+        en: 'Immersive neon cyberpunk atmospheres mixed with relaxing Lofi Synthwave melodies, perfect for study, work and late night relaxation.',
+        zh: '沉浸式霓虹赛博朋克光影，搭配放松解压的 Lofi Synthwave 音乐，适合学习、工作与放松时播放。'
+      },
+      embedUrl: 'https://show.vidplayer.live/#fdo5m',
+      coverImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+      duration: '01:06',
+      category: { en: 'Music', zh: '音乐' },
+      views: '84.5k',
+      likes: '6.9k',
+      createdAt: '2026-07-30',
+      author: {
+        name: 'CyberWave FM',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
+        subscribers: { en: '194K', zh: '19.4万' }
+      }
     }
   ]
 
