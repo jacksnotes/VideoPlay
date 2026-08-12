@@ -29,6 +29,7 @@
               <iframe
                 :src="video.embedUrl"
                 allowfullscreen
+                sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-popups"
                 loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin"
                 style="width:100%;aspect-ratio:16/9;border:0"
