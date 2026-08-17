@@ -77,7 +77,7 @@ export const useVideos = () => {
         zh: '收录近百部经典热血动漫的巅峰战斗对决片段，配上激昂混音背景音乐，重温青春与梦想的热血时刻！'
       },
       embedUrl: 'https://playmogo.com/e/ldypys5x33mp',
-      coverImage: 'https://doimg.net/snaps/09hnn7q1iz98umgn.jpg',
+      coverImage: 'https://dodoimg.com/snaps/09hnn7q1iz98umgn.jpg',
       duration: '01:05',
       category: { en: 'Anime', zh: '动漫' },
       views: '230.8k',
@@ -100,7 +100,7 @@ export const useVideos = () => {
         zh: '沉浸式霓虹赛博朋克光影，搭配放松解压的 Lofi Synthwave 音乐，适合学习、工作与放松时播放。'
       },
       embedUrl: 'https://playmogo.com/e/kr5eapi3fly1',
-      coverImage: 'https://doimg.net/snaps/n7oxw0eyb700daug.jpg',
+      coverImage: 'https://dodoimg.com/snaps/n7oxw0eyb700daug.jpg',
       duration: '01:05',
       category: { en: 'Music', zh: '音乐' },
       views: '84.5k',
